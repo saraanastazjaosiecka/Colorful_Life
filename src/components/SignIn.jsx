@@ -26,16 +26,20 @@ function SignIn() {
 
   return (
     <>
-      <h1> SignIn </h1>
+      <h1> Colorful life </h1>
       {authError && <div style={{ color: "red" }}> {authError} </div>}
       <form onSubmit={handleSignIn}>
-        <input id="email" placeholder="podaj swój adres email"></input>
+        <input id="email" placeholder="Enter your e-mail address"></input>
         <br />
-        <input id="password" type="password" placeholder="Podaj hasło"></input>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+        ></input>
         <br />
-        <button>Zaloguj się</button>
+        <button> Log in </button>
       </form>
-      <Link to="/signup"> Załóż konto </Link>
+      <Link to="/signup"> Sign up </Link>
     </>
   );
 }
