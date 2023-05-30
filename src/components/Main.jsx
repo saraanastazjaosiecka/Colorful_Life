@@ -75,11 +75,12 @@ function Main() {
 
   return (
     <>
-      <button onClick={handleLogout}> Wyloguj </button>
+      <button onClick={handleLogout}> Log out </button>
       <h1> Main </h1>
+
       <form onSubmit={handleSaveText}>
-        <textarea id="text" placeholder="Wpisz tekst..."></textarea>
-        <button> Zapisz </button>
+        <textarea id="text" placeholder="Write here..."></textarea>
+        <button> Add entry </button>
       </form>
 
       {entries && (

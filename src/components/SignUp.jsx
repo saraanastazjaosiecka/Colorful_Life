@@ -29,21 +29,25 @@ function SignUp() {
 
   return (
     <div>
-      <h1> SignUp </h1>
+      <h1> Colorful life </h1>
       <form onSubmit={handleSignUp}>
-        <input id="email" placeholder="Podaj swój e-mail"></input>
+        <input id="email" placeholder="Enter your e-mail address"></input>
         <br />
-        <input id="password" type="password" placeholder="podaj hasło"></input>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter password"
+        ></input>
         <br />
         <input
           id="password_repeat"
           type="password"
-          placeholder="potwierdz haslo / re-enter haslo"
+          placeholder="Re-enter password"
         ></input>
         <br />
-        <button>Zarejestruj się</button>
+        <button> Sign up </button>
       </form>
-      <Link to="/signin">Zaloguj się</Link>
+      <Link to="/signin"> Log in </Link>
     </div>
   );
 }
