@@ -2,7 +2,27 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../services/supabase";
 
+// // Array with songs
+const songs = {
+  blue: {
+    links: [
+      " https://open.spotify.com/track/24nTZUgqU1P7fn074Pm3xZ?si=2508a1a9bcd24507",
+      "https://open.spotify.com/track/24nTZUgqU1P7fn074Pm3xZ?si=2508a1a9bcd24507",
+      "https://open.spotify.com/track/24nTZUgqU1P7fn074Pm3xZ?si=2508a1a9bcd24507",
+      "https://open.spotify.com/track/24nTZUgqU1P7fn074Pm3xZ?si=2508a1a9bcd24507",
+    ],
+  },
+  red: {
+    links: ["red 1", " red 2", " red 3", "red 4"],
+  },
+};
+
 export default function JournalForm({ color }) {
+  // Getting random song
+  const mySong =
+    songs[color].links[Math.floor(Math.random() * songs[color].links.length)];
+  console.log(mySong);
+
   //navigation
   const navigation = useNavigate();
 
@@ -57,6 +77,7 @@ export default function JournalForm({ color }) {
           entry: text.value,
           author: session.session.user.email,
           current_date: visiblecurrentDate,
+          random_song: mySong,
         },
       ])
       .select("*");
