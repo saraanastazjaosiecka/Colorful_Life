@@ -43,6 +43,7 @@ export default function Journal_Entries() {
       setEntries(data);
       setEntries((prev) => [...prev, data[0]]);
     }
+    // entries.sort((a, b) => a.id - b.id); // Sorting entries
 
     console.log(data);
   };
@@ -75,8 +76,12 @@ export default function Journal_Entries() {
       <h2>Your colorful memories...</h2>
       {entries && (
         <ul>
-          {entries.map(({ entry, id }) => (
-            <li key={id}> {entry} </li>
+          {entries.map(({ entry, current_date, random_song, id }) => (
+            <li key={id}>
+              {" "}
+              {entry} {current_date}
+              <a href={random_song}> Listen to your song on Spotify </a>
+            </li>
           ))}
         </ul>
       )}
