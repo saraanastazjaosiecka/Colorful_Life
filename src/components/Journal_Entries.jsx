@@ -37,15 +37,13 @@ export default function Journal_Entries() {
     let { data, error } = await supabase
       .from("Gratitude Journal Entries")
       .select("*")
-      .eq("author", session.session.user.email);
+      .eq("author", session.session.user.email)
+      .order("id", { ascending: false }); // Sorting entries
+    console.log(data);
 
     if (!error) {
       setEntries(data);
-      setEntries((prev) => [...prev, data[0]]);
     }
-    // entries.sort((a, b) => a.id - b.id); // Sorting entries
-
-    console.log(data);
   };
 
   useEffect(() => {
@@ -78,9 +76,30 @@ export default function Journal_Entries() {
         <ul>
           {entries.map(({ entry, current_date, random_song, id }) => (
             <li key={id}>
-              {" "}
-              {entry} {current_date}
-              <a href={random_song}> Listen to your song on Spotify </a>
+              <div
+                className="journal_entry"
+                style={{ border: `3px solid black` }}
+              >
+                <div
+                  className="current_date_div"
+                  style={{ border: "1px solid red" }}
+                >
+                  {" "}
+                  {current_date}
+                </div>
+                <div style={{ border: `1px solid blue` }}> {entry} </div>
+                <div>
+                  {" "}
+                  <a
+                    href={random_song}
+                    target="_blank"
+                    style={{ border: "1px solid yellow" }}
+                  >
+                    {" "}
+                    Listen to your song on Spotify{" "}
+                  </a>{" "}
+                </div>
+              </div>
             </li>
           ))}
         </ul>
