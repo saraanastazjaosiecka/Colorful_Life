@@ -15,6 +15,9 @@ const songs = {
   red: {
     links: ["red 1", " red 2", " red 3", "red 4"],
   },
+  green: {
+    links: ["green 1", " green 2", " green 3", "green 4"],
+  },
 };
 
 export default function JournalForm({ color }) {
@@ -29,6 +32,11 @@ export default function JournalForm({ color }) {
   // handleTransferToHistory()
   function handleTransferToHistory() {
     navigation("/journal_entries");
+  }
+
+  // refreshing page
+  function handleTransferToTheBeginning() {
+    window.location.reload(false);
   }
 
   //getSession()
@@ -105,6 +113,11 @@ export default function JournalForm({ color }) {
       <button onClick={handleTransferToHistory}>
         {" "}
         Read your gratitude journal{" "}
+      </button>
+      <br />
+      <br />
+      <button onClick={handleTransferToTheBeginning}>
+        Choose another color
       </button>
     </>
   );

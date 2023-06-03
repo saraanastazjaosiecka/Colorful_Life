@@ -1,9 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import "../scss/Grid_Styles.scss";
 
 export default function Grid({ onColorSelected }) {
   //
   function selectColor(color) {
     onColorSelected(color);
+  }
+
+  //navigation
+  const navigation = useNavigate();
+
+  // handleTransferToHistory()
+  function handleTransferToHistory() {
+    navigation("/journal_entries");
   }
 
   return (
@@ -25,6 +34,12 @@ export default function Grid({ onColorSelected }) {
         onClick={() => selectColor("yellow")}
       >
         yellow
+      </button>
+      <br />
+      <br />
+      <button onClick={handleTransferToHistory}>
+        {" "}
+        Read your gratitude journal{" "}
       </button>
     </div>
   );
