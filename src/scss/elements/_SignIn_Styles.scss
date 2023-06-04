@@ -1,0 +1,45 @@
+.signIn_container {
+  width: 100%;
+  height: 100%;
+  background-image: url("/src/assets/images/SignIn.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  .signUp_button_container {
+    margin-right: 3rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.signIn_inputs {
+  margin-right: 13rem;
+  margin-bottom: 0.5rem;
+  color: $main-color;
+
+  h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 4.5rem;
+    word-spacing: 5px;
+    margin-block-end: 0.1em;
+    text-shadow: 2px 2px #0f0808;
+  }
+
+  input {
+    margin-bottom: 10px;
+    border: 1px solid $main-color;
+    height: 25px;
+  }
+}
+
+input:focus::placeholder {
+  color: $main-color;
+}
+
+input:focus {
+  outline: 2px solid $main-color;
+  // box-shadow: 1.5px 1.5px 1.5px 1.5px black;
+}
