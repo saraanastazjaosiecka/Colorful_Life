@@ -1,0 +1,9 @@
+//grid buttons styling
+@mixin button_styles($bg, $font) {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: $bg;
+  color: $font;
+  @content;
+}
