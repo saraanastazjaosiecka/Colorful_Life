@@ -27,27 +27,39 @@ function SignIn() {
   return (
     <>
       <div className="signIn_container">
-        <div className="signUp_button_container">
+        <div className="signIn_signUp_button">
           <Link to="/signup">
             {" "}
             <button> Sign up </button>
-          </Link>{" "}
+          </Link>
         </div>
-        <div className="signIn_inputs">
-          <h1> Colorful life </h1>
-          {authError && <div style={{ color: "red" }}> {authError} </div>}
-          <form onSubmit={handleSignIn}>
-            <input id="email" placeholder="Enter your e-mail address"></input>
-            <br />
-            <input
-              id="password"
-              type="password"
-              placeholder="Enter your password"
-            ></input>
-            <br />
-            <button> Log in </button>
-          </form>
+        <div className="signIn_form">
+          <div className="signIn_title">
+            {" "}
+            <h1> Colorful life </h1>
+          </div>
+          <div className="signIn_inputs">
+            <div className="signIn_error">
+              {" "}
+              {authError && (
+                <div style={{ color: "red" }}> {authError} </div>
+              )}{" "}
+            </div>
+
+            <form onSubmit={handleSignIn}>
+              <input id="email" placeholder="Enter your e-mail address"></input>
+              <br />
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter your password"
+              ></input>
+              <br />
+              <button> Log in </button>
+            </form>
+          </div>
         </div>
+        <div />
       </div>
     </>
   );
