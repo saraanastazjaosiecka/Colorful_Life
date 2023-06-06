@@ -1,46 +1,59 @@
+// C
 .grid_button_C_major {
   @include button_styles(#ff1d04, white);
 }
 
+//G
 .grid_button_G_major {
   @include button_styles(#fb9507, white);
 }
 
+// D
 .grid_button_D_major {
   @include button_styles(#fbff00, black);
 }
 
+// A
 .grid_button_A_major {
   @include button_styles(#4dd34d, black);
 }
 
+// E
 .grid_button_E_major {
   @include button_styles(#cef2f4, black);
 }
+
+// B
 .grid_button_B_major {
   @include button_styles(#86d3ff, black);
 }
 
+// Gb
 .grid_button_Gb_major {
   @include button_styles(#83a6f2, black);
 }
 
+// Db
 .grid_button_Db_major {
   @include button_styles(#964df5, black);
 }
 
+//Ab
 .grid_button_Ab_major {
   @include button_styles(#ca90f0, black);
 }
 
+// Eb
 .grid_button_Eb_major {
   @include button_styles(#df519a, black);
 }
 
+// Bb
 .grid_button_Bb_major {
   @include button_styles(#b48295, black);
 }
 
+// Fb
 .grid_button_F_major {
   @include button_styles(#b73939, black);
 }

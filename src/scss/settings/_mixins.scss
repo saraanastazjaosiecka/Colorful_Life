@@ -1,9 +1,33 @@
 //grid buttons styling
 @mixin button_styles($bg, $font) {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
+  margin: 10px;
   background-color: $bg;
   color: $font;
+  box-shadow: 3px 3px 3px 3px rgb(75, 56, 56);
+  &:hover {
+    box-shadow: 5px 5px 5px 5px rgb(75, 56, 56);
+  }
+  @content;
+}
+
+// grid lines styling
+@mixin grid_lines_styling() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+// button styling
+@mixin main_button_styles() {
+  color: white;
+  margin-top: 5px;
+  &:hover {
+    // border: 1px solid red;
+    box-shadow: 1px 1px 1px 1px #f0552f;
+  }
   @content;
 }
