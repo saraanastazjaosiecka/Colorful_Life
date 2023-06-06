@@ -1,0 +1,44 @@
+.grid_buttons {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .grid_buttons_first_line,
+  .grid_buttons_second_line,
+  .grid_buttons_third_line,
+  .grid_buttons_fourth_line {
+    @include grid_lines_styling;
+    gap: 230px;
+  }
+}
+
+.grid_buttons_first_line {
+  margin-right: 100px;
+}
+
+.grid_buttons_second_line {
+  margin-left: 230px;
+}
+
+.grid_buttons_third_line {
+  margin-right: 50px;
+}
+
+.grid_buttons_fourth_line {
+  margin-right: 290px;
+}
+
+.grid_title_question {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 3.3rem;
+  color: $main-color;
+  word-spacing: 5px;
+  margin-block-end: 0.1em;
+  text-shadow: 1px 1px #8a3c2c;
+}
+
+.transferToHistoryButton {
+  margin-left: 1100px;
+  margin-bottom: 20px;
+}

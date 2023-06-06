@@ -52,14 +52,14 @@ function Main() {
   };
 
   return (
-    <>
-      <button onClick={handleLogout}> Log out </button>
-      <br />
-      <br />
+    <div className="Main_container">
+      <div className="LogOutButtonDiv">
+        {" "}
+        <button onClick={handleLogout}> Log out </button>
+      </div>
       {gridVisible && <Grid onColorSelected={colorSelection} />}
       {!gridVisible && <JournalForm color={selectedColor} />}
-      <br />
-    </>
+    </div>
   );
 }
 
