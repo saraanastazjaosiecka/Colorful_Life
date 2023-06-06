@@ -1,4 +1,4 @@
-.signIn_container {
+.signUp_container {
   width: 100%;
   height: 100%;
   background-image: url("/src/assets/images/SignIn.jpeg");
@@ -11,7 +11,7 @@
   justify-content: space-around;
   align-items: end;
 
-  .signIn_signUp_button {
+  .signUp_SignIn_button {
     margin-right: 120px;
     // margin-bottom: 30px;
     button {
@@ -24,12 +24,12 @@
   }
 }
 
-.signIn_form {
+.signUp_form {
   color: $main-color;
   margin-right: 120px;
   // margin-bottom: 80px;
   display: flex;
-  gap: 100px;
+  gap: 59px; // ! important property !
   flex-direction: column;
 
   h1 {
@@ -39,19 +39,10 @@
     margin-block-end: 0.1em;
     text-shadow: 2px 2px #f0552f;
   }
-  .signIn_inputs {
+  .signUp_inputs {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-
-    .signIn_error {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 200px;
-      margin-bottom: 2px;
-      text-shadow: 2px black;
-    }
     form {
       text-align: right;
       button {

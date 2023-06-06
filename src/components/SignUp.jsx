@@ -28,26 +28,38 @@ function SignUp() {
   };
 
   return (
-    <div>
-      <h1> Colorful life </h1>
-      <form onSubmit={handleSignUp}>
-        <input id="email" placeholder="Enter your e-mail address"></input>
-        <br />
-        <input
-          id="password"
-          type="password"
-          placeholder="Enter password"
-        ></input>
-        <br />
-        <input
-          id="password_repeat"
-          type="password"
-          placeholder="Re-enter password"
-        ></input>
-        <br />
-        <button> Sign up </button>
-      </form>
-      <Link to="/signin"> Log in </Link>
+    <div className="signUp_container">
+      <div className="signUp_SignIn_button">
+        <Link to="/signin">
+          <button> Log in </button>
+        </Link>
+      </div>
+
+      <div className="signUp_form">
+        <div className="signUp_title">
+          <h1> Colorful life </h1>
+        </div>
+
+        <div className="signUp_inputs">
+          <form onSubmit={handleSignUp}>
+            <input id="email" placeholder="Enter your e-mail address"></input>
+            <br />
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter password"
+            ></input>
+            <br />
+            <input
+              id="password_repeat"
+              type="password"
+              placeholder="Re-enter password"
+            ></input>
+            <br />
+            <button> Sign up </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
