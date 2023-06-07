@@ -51,15 +51,27 @@ function Main() {
     }
   };
 
+  // handleTransferToHistory()
+  function handleTransferToHistory() {
+    navigation("/journal_entries");
+  }
+
   return (
-    <div className="Main_container">
-      <div className="LogOutButtonDiv">
-        {" "}
-        <button onClick={handleLogout}> Log out </button>
+    <>
+      <div className="Main_container">
+        <div className="LogOutButtonDiv">
+          {" "}
+          <button onClick={handleLogout}> Log out </button>
+        </div>
+        {gridVisible && <Grid onColorSelected={colorSelection} />}
+        {!gridVisible && <JournalForm color={selectedColor} />}
+        <div className="transferToHistoryButton">
+          <button onClick={handleTransferToHistory}>
+            Your gratitude journal
+          </button>
+        </div>
       </div>
-      {gridVisible && <Grid onColorSelected={colorSelection} />}
-      {!gridVisible && <JournalForm color={selectedColor} />}
-    </div>
+    </>
   );
 }
 

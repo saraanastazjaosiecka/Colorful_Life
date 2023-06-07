@@ -10,25 +10,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  // position: relative;
 
   .LogOutButtonDiv {
     width: 100%;
     display: flex;
     justify-content: end;
     margin-right: 120px;
+    position: absolute;
+    margin-bottom: 600px;
     button {
       @include main_button_styles;
     }
   }
-}
 
-.transferToHistoryButton {
-  button {
-    @include main_button_styles;
-    font-size: 1.2rem;
-    color: rgb(255, 241, 229);
-    &:hover {
-      box-shadow: 2px 2px 2px 2px rgb(75, 56, 56);
+  .transferToHistoryButton {
+    margin-left: 1100px;
+    position: absolute;
+    margin-top: 600px;
+    button {
+      @include main_button_styles;
+      font-size: 1.2rem;
+      color: rgb(255, 241, 229);
+      &:hover {
+        box-shadow: 2px 2px 2px 2px rgb(75, 56, 56);
+      }
     }
   }
 }

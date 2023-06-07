@@ -1,17 +1,6 @@
-import { useNavigate } from "react-router-dom";
-
 export default function Grid({ onColorSelected }) {
-  //
   function selectColor(color) {
     onColorSelected(color);
-  }
-
-  //navigation
-  const navigation = useNavigate();
-
-  // handleTransferToHistory()
-  function handleTransferToHistory() {
-    navigation("/journal_entries");
   }
 
   return (
@@ -111,12 +100,6 @@ export default function Grid({ onColorSelected }) {
             {/* F major */}
           </button>
         </div>
-      </div>
-
-      <div className="transferToHistoryButton">
-        <button onClick={handleTransferToHistory}>
-          Your gratitude journal
-        </button>
       </div>
     </>
   );

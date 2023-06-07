@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import supabase from "../services/supabase";
 
-// // Array with songs
+// Array with songs
 const songs = {
   "#ff1d04": {
     links: ["C major 1", " C major 2", " C major 3", "C major 4"],
@@ -118,29 +118,62 @@ export default function JournalForm({ color }) {
     handleTransferToHistory();
   };
 
+  // textarea text Color
+  const [textColor, setTextColor] = useState(null);
+
+  useEffect(() => {
+    if (color == "#ff1d04") {
+      setTextColor("white");
+    } else if (color == "#964df5") {
+      setTextColor("white");
+    } else if (color == "#b48295") {
+      setTextColor("white");
+    } else if (color == "#b73939") {
+      setTextColor("white");
+    } else if (color == "#df519a") {
+      setTextColor("white");
+    } else {
+      setTextColor("black");
+    }
+    alreadyMounted = true;
+  }, []);
+
   return (
     <>
-      <form onSubmit={handleSaveText}>
-        <textarea
-          id="text"
-          placeholder="Write here..."
-          style={{ height: "300px", background: color }}
-        />
+      <div className="Journal_Form">
+        <h1 className="journal_form_title_question">
+          {" "}
+          What are you grateful for today?{" "}
+        </h1>
+
+        <form onSubmit={handleSaveText}>
+          <div className="Journal_Form_Div">
+            <div className="Journal_Form_textarea">
+              <textarea
+                className="form_textarea"
+                id="text"
+                placeholder="Write here..."
+                style={{
+                  background: color,
+                  color: textColor,
+                }}
+              />
+            </div>
+            <div className="Add_entry_button">
+              <button>Add entry </button>
+            </div>
+          </div>
+          <br />
+          <br />
+        </form>
         <br />
-        <br />
-        <button>Add entry</button>
-        <br />
-        <br />
-      </form>
-      <button onClick={handleTransferToHistory}>
-        {" "}
-        Read your gratitude journal{" "}
-      </button>
-      <br />
-      <br />
-      <button onClick={handleTransferToTheBeginning}>
-        Choose another color
-      </button>
+        <div className="button_choose_color">
+          <button onClick={handleTransferToTheBeginning}>
+            {" "}
+            Choose another color{" "}
+          </button>
+        </div>
+      </div>
     </>
   );
 }
