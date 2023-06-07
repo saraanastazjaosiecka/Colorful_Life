@@ -1,0 +1,85 @@
+.Journal_Form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100vw;
+  padding-top: 30px;
+}
+
+.journal_form_title_question {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 3.3rem;
+  color: $main-color;
+  word-spacing: 5px;
+  margin-block-end: 0.1em;
+  text-shadow: 1px 1px #8a3c2c;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+// form
+.Journal_Form_Div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  // width: 100%;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  .Journal_Form_textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 850px;
+    height: 300px;
+    textarea {
+      width: 750px;
+      height: 320px;
+
+      opacity: 0.7;
+      border: none;
+      padding: 10px;
+      outline: none;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      line-height: 150%;
+    }
+    textarea:hover {
+      transition: 0.2s;
+      border: 2px solid #8a3c2c;
+    }
+    textarea::placeholder {
+      color: rgb(64, 55, 55);
+    }
+  }
+  .Add_entry_button {
+    margin-top: 50px;
+
+    button {
+      margin: 10px;
+
+      @include main_button_styles;
+      font-size: 1.2rem;
+      color: rgb(255, 241, 229);
+      &:hover {
+        box-shadow: 2px 2px 2px 2px rgb(75, 56, 56);
+      }
+    }
+  }
+}
+
+.button_choose_color {
+  margin-left: 40px;
+
+  button {
+    margin: 10px;
+
+    @include main_button_styles;
+    font-size: 1.2rem;
+    color: rgb(255, 241, 229);
+    &:hover {
+      box-shadow: 2px 2px 2px 2px rgb(75, 56, 56);
+    }
+  }
+}
