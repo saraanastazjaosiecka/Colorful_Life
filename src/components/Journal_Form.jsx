@@ -108,6 +108,7 @@ export default function JournalForm({ color }) {
           author: session.session.user.email,
           current_date: visiblecurrentDate,
           random_song: mySong,
+          selected_color: color,
         },
       ])
       .select("*");
@@ -120,6 +121,7 @@ export default function JournalForm({ color }) {
 
   // textarea text Color
   const [textColor, setTextColor] = useState(null);
+  const [backgroundColor, setbackgroundColor] = useState(null);
 
   useEffect(() => {
     if (color == "#ff1d04") {
@@ -137,6 +139,8 @@ export default function JournalForm({ color }) {
     }
     alreadyMounted = true;
   }, []);
+
+  //backgroundColor
 
   return (
     <>

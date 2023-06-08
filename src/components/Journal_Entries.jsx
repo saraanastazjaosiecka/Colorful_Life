@@ -88,20 +88,31 @@ export default function Journal_Entries() {
           <div className="Journal_Entries">
             {entries && (
               <ul className="Ul_Entries">
-                {entries.map(({ entry, current_date, random_song, id }) => (
-                  <li key={id}>
-                    <div className="journal_entry">
-                      <div className="current_date_div"> {current_date}</div>
-                      <div className="entry_div"> {entry} </div>
-                      <div className="song_button">
-                        {" "}
-                        <a href={random_song} target="_blank">
-                          Listen to your song on Spotify{" "}
-                        </a>{" "}
+                {entries.map(
+                  ({
+                    entry,
+                    current_date,
+                    random_song,
+                    id,
+                    selected_color,
+                  }) => (
+                    <li key={id}>
+                      <div
+                        style={{ backgroundColor: selected_color }}
+                        className="journal_entry"
+                      >
+                        <div className="current_date_div"> {current_date}</div>
+                        <div className="entry_div"> {entry} </div>
+                        <div className="song_button">
+                          {" "}
+                          <a href={random_song} target="_blank">
+                            Listen to your song on Spotify{" "}
+                          </a>{" "}
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
+                    </li>
+                  )
+                )}
               </ul>
             )}
           </div>
