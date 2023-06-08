@@ -58,7 +58,7 @@
 
     button {
       margin: 10px;
-
+      border-radius: 50px;
       @include main_button_styles;
       font-size: 1.2rem;
       color: rgb(255, 241, 229);
