@@ -69,48 +69,44 @@ export default function Journal_Entries() {
   };
 
   return (
-    <>
-      <h1> Gratitude Journal Entries </h1>
-      <h2>Your colorful memories...</h2>
-      {entries && (
-        <ul>
-          {entries.map(({ entry, current_date, random_song, id }) => (
-            <li key={id}>
-              <div
-                className="journal_entry"
-                style={{ border: `3px solid black` }}
-              >
-                <div
-                  className="current_date_div"
-                  style={{ border: "1px solid red" }}
-                >
-                  {" "}
-                  {current_date}
-                </div>
-                <div style={{ border: `1px solid blue` }}> {entry} </div>
-                <div>
-                  {" "}
-                  <a
-                    href={random_song}
-                    target="_blank"
-                    style={{ border: "1px solid yellow" }}
-                  >
-                    {" "}
-                    Listen to your song on Spotify{" "}
-                  </a>{" "}
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      )}
-      <button onClick={handleLogout}> Log out </button>
-      <br />
-      <br />
-      <button onClick={handleTransferToTheBeginning}>
-        {" "}
-        Add another entry{" "}
-      </button>
-    </>
+    <div className="Journal_Entries_container">
+      <div className="Journal_Entries_Elements">
+        <div className="logOut_Button_Entries">
+          <button onClick={handleLogout}> Log out </button>{" "}
+        </div>
+        <div className="Title_Entries">
+          {" "}
+          <h1> Gratitude Journal </h1>{" "}
+        </div>
+        <div className="Journal_Entries">
+          {entries && (
+            <ul className="Ul_Entries">
+              {entries.map(({ entry, current_date, random_song, id }) => (
+                <li key={id}>
+                  <div className="journal_entry">
+                    <div className="current_date_div"> {current_date}</div>
+                    <div> {entry} </div>
+                    <div>
+                      {" "}
+                      <a href={random_song} target="_blank">
+                        {" "}
+                        Listen to your song on Spotify{" "}
+                      </a>{" "}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        <div className="Add_another_entry_button">
+          <button onClick={handleTransferToTheBeginning}>
+            {" "}
+            Add another entry{" "}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
