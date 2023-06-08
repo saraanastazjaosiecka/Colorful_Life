@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import supabase from "../services/supabase";
 
 export default function Error_404() {
   //navigation
@@ -13,7 +12,6 @@ export default function Error_404() {
     <>
       <div className="error_main_container">
         <div className="error_title">
-          {" "}
           <h1> 404</h1>
         </div>
         <div className="error_subtitle">

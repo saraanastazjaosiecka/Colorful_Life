@@ -108,7 +108,7 @@ export default function Journal_Entries() {
                         <div className="song_button">
                           {" "}
                           <a href={random_song} target="_blank">
-                            Listen to your song on Spotify{" "}
+                            Listen to your track on Spotify{" "}
                           </a>{" "}
                         </div>
                       </div>
