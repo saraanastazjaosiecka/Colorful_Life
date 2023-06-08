@@ -13,7 +13,7 @@
 
   .signIn_signUp_button {
     margin-right: 120px;
-    // margin-bottom: 30px;
+
     button {
       color: white;
     }
@@ -27,9 +27,9 @@
 .signIn_form {
   color: $main-color;
   margin-right: 120px;
-  // margin-bottom: 80px;
+
   display: flex;
-  gap: 100px;
+  gap: 62px;
   flex-direction: column;
 
   h1 {
@@ -49,8 +49,10 @@
       justify-content: center;
       align-items: center;
       width: 200px;
-      margin-bottom: 2px;
+
+      height: 30px;
       text-shadow: 2px black;
+      position: absolute;
     }
     form {
       text-align: right;
@@ -78,5 +80,4 @@ input:focus::placeholder {
 
 input:focus {
   outline: 2px solid $main-color;
-  // box-shadow: 1.5px 1.5px 1.5px 1.5px black;
 }

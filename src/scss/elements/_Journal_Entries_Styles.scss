@@ -1,0 +1,159 @@
+.Journal_Entries_container {
+  width: 100%;
+  height: 100%;
+  background-image: url("/src/assets/images/Entries.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  .Journal_Entries_Elements {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: 95%;
+    align-items: center;
+
+    .logOut_Button_Entries {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      margin-right: 120px;
+      position: absolute;
+      margin-bottom: 600px;
+      margin-top: 8.5px;
+      button {
+        @include main_button_styles;
+        color: rgb(255, 241, 229);
+        &:hover {
+          box-shadow: 2px 2px 2px 2px rgb(75, 56, 56);
+        }
+      }
+    }
+    .Title_Entries {
+      text-align: center;
+      margin-left: 630px;
+      margin-top: 90px;
+
+      font-family: "Berkshire Swash", cursive;
+      font-size: 2.5rem;
+      color: $main-color;
+      word-spacing: 5px;
+      margin-block-end: 0.1em;
+
+      text-shadow: 7px 5px #7a2929;
+    }
+
+    .second_container_entries {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 500px;
+
+      margin-top: 25px;
+
+      .Journal_Entries {
+        overflow-y: scroll;
+        width: 50%;
+        height: 63%;
+        opacity: 0.7;
+
+        .Ul_Entries {
+          list-style: none;
+          li {
+            margin-bottom: 15px;
+            margin-right: 5px;
+
+            border-radius: 20px;
+            .journal_entry {
+              border-radius: 20px;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+
+              background-color: rgba(224, 103, 103, 0.4);
+              .current_date_div {
+                border-radius: 20px;
+                padding: 10px;
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin: 5px;
+                color: black;
+                font-family: "Exo 2", sans-serif;
+              }
+              .entry_div {
+                font-size: 1.2rem;
+                border-radius: 20px;
+                padding: 10px;
+                // font-weight: bold;
+                line-height: 125%;
+                min-height: 50px;
+                color: black;
+                font-family: "Exo 2", sans-serif;
+              }
+              .song_button {
+                border-radius: 20px;
+                padding: 8px;
+                font-size: 1.1rem;
+
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                border-bottom: 3px solid transparent;
+                a {
+                  background-color: white;
+                  color: black;
+                  width: 320px;
+                  text-align: center;
+                  border-radius: 20px;
+                  padding: 5px;
+                  box-shadow: 2px 2px black;
+                  border: 1px solid transparent;
+                  font-family: "Exo 2", sans-serif;
+                }
+                a:hover {
+                  background-color: $main-color;
+
+                  border: 1px solid black;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .Journal_Entries::-webkit-scrollbar {
+        background-color: rgba(122, 41, 41, 0.6);
+        border-radius: 20%;
+        width: 15px;
+      }
+      .Journal_Entries::-webkit-scrollbar-thumb {
+        background-color: rgba(240, 113, 113, 0.6);
+
+        width: 80%;
+
+        border-radius: 30%;
+      }
+      .Add_another_entry_button {
+        height: 63%;
+        display: flex;
+        align-items: flex-end;
+        button {
+          margin-bottom: 25px;
+          border-radius: 50px;
+          @include main_button_styles;
+          font-size: 1.2rem;
+          color: rgb(255, 241, 229);
+          &:hover {
+            box-shadow: 2px 2px 2px 2px rgb(75, 56, 56);
+          }
+        }
+      }
+    }
+  }
+}

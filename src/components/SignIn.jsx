@@ -45,7 +45,8 @@ function SignIn() {
               <div style={{ color: "red" }}> {authError} </div>
             )}{" "}
           </div>
-
+          <br />
+          <br />
           <form onSubmit={handleSignIn}>
             <input id="email" placeholder="Enter your e-mail address"></input>
             <br />

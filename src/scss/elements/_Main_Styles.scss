@@ -21,6 +21,10 @@
     margin-bottom: 600px;
     button {
       @include main_button_styles;
+      color: rgb(255, 241, 229);
+      &:hover {
+        box-shadow: 2px 2px 2px 2px rgb(75, 56, 56);
+      }
     }
   }
 
