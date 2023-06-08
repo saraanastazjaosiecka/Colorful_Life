@@ -98,7 +98,9 @@ export default function Journal_Entries() {
                   }) => (
                     <li key={id}>
                       <div
-                        style={{ backgroundColor: selected_color }}
+                        style={{
+                          backgroundColor: selected_color,
+                        }}
                         className="journal_entry"
                       >
                         <div className="current_date_div"> {current_date}</div>

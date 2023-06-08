@@ -92,6 +92,11 @@ export default function JournalForm({ color }) {
 
     const { text } = e.target.elements;
 
+    // blocking the addition of empty entries to the supabase
+    if (!text.value) {
+      return;
+    }
+
     // currentDate
     const currentDate = new Date();
     const visiblecurrentDate = `${currentDate.getDate()}/${
@@ -121,7 +126,6 @@ export default function JournalForm({ color }) {
 
   // textarea text Color
   const [textColor, setTextColor] = useState(null);
-  const [backgroundColor, setbackgroundColor] = useState(null);
 
   useEffect(() => {
     if (color == "#ff1d04") {
