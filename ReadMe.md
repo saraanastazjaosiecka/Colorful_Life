@@ -2,6 +2,12 @@
 
 ## used tech
 
+- JavaScript
+- Sass
+- React
+- React.js with Hooks
+- Vite.js
+
 ## how to use
 
 ### login / create account
