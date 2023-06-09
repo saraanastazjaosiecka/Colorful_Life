@@ -38,7 +38,7 @@ React components for this part are stored in
 
 ### Listen Music
 
-Colorful life will match proper track based on the color you chose before. It is based on Skriabin theory of synestesia so there is no randomness. Pay attention to music while you appreciate your day.
+Colorful life will match proper track based on the color you chose before. It is based on Skriabin theory of synesthesia so there is no randomness. Pay attention to music while you appreciate your day.
 
 React components for this part are stored in
 [here](src/components/Journal_Form.jsx) and [here](src/components/Journal_Entries.jsx).
