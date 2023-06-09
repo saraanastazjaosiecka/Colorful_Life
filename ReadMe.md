@@ -49,7 +49,7 @@ React components for this part are stored in
 
 You can always track back your memories by going to archive of your thoughts.
 
-![Alt text](src/assets/images_for_Readme_file/history.png)
+![Alt text](src/assets/images_for_Readme_file/entries_history.png)
 
 React component for this part is stored in [here](src/components/Journal_Entries.jsx).
 <br/>
