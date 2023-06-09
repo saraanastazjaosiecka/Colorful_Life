@@ -1,15 +1,6 @@
 # intro
 
-"Colorful life" is an application
-<br/>
-
-journey site for vreating memiries with nvolors
-
 ## used tech
-
-- react
-- sass
-- js
 
 ## how to use
 
@@ -28,7 +19,7 @@ code
 pic
 code
 
-### listen song
+### listen track
 
 pic
 code
@@ -46,4 +37,4 @@ run
 npm run dev
 ```
 
-app is served on port 3138
+app is served on port ...
