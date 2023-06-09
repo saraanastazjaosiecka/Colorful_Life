@@ -305,8 +305,6 @@ export default function JournalForm({ color }) {
     alreadyMounted = true;
   }, []);
 
-  //backgroundColor
-
   return (
     <>
       <div className="Journal_Form">
