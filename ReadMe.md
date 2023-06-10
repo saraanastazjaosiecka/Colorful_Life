@@ -62,7 +62,7 @@ React component for this part is stored in [here](src/components/Journal_Entries
 - Sass
 - JavaScript
 - React
-- React.js with Hooks
+- React Hooks
 - Vite.js
 - Supabase
 - Node.js
